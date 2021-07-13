@@ -4,7 +4,7 @@ import { fetchAction } from './actions';
 import Ingredient from './Ingredient';
 
 const App = ({ loading, ingredients, fetchIngredients }) => {
-  let buttonContent = `Taco me${ingredients.length ? ' again': ''}!`;
+  let buttonContent = `Click me${ingredients.length ? ' again': ''}!`;
   if (loading) {
     buttonContent = <div className="loader"/>;
   }
@@ -13,7 +13,7 @@ const App = ({ loading, ingredients, fetchIngredients }) => {
     <div className="App">
       <header className="App-header">
         <div className="App-content-wrapper">
-          <h4>Get a random taco</h4>
+          <h4>Get a random Food Recipe</h4>
           <div>
             <button onClick={fetchIngredients}>
               {buttonContent}
